@@ -1,0 +1,85 @@
+// FUN FACTS SECTION
+
+section.funFacts {
+    background: url(../images/waterfall.jpg);
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    
+    h3 {
+        padding-top: 80px;
+        color: white;
+    }
+    .facts {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0;
+
+        h2 {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            padding-top: 30px;
+        }
+        h4 {
+            padding-top: 10px;
+            font-weight: lighter;
+        }
+
+        .fact {
+            border: 3px solid white;
+            width: 20%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            height: 180px;
+            &:last-child{
+                margin-right: 0;
+            }
+
+            img {
+            background: white;
+            width: 35px;
+            height: 35px;
+            padding: 10px;
+            margin: 0 auto;
+
+            }
+        }
+    }
+
+    // media queries:
+
+    @media (max-width: 940px) {
+        height: 120vh;
+        .facts {
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 0 auto;
+            .fact {
+                width: calc(50% - 20px);
+                margin:10px;
+                height: 200px;
+            }
+            .fact:last-child {
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .facts {
+            width: 90%; 
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        .facts {
+            width: 100%; 
+        }
+    }
+}

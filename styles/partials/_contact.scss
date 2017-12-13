@@ -1,0 +1,101 @@
+// CONTACT SECTION
+
+section.contact {
+    background: #fff;
+    h3 {
+        padding-top: 150px;
+    }
+
+    h3.mainTitle::after {
+            content:'';
+            height: 30px;
+            width:80px;
+            display:block;
+            border-bottom: 1px solid lightgrey;
+            margin: auto;
+        }
+
+        .diamond {
+            height: 6px;
+            width: 6px;
+            margin:0 auto;
+            background: $primaryColor;
+            border: 1px solid white;
+            box-shadow: 1px 1px 1px grey;
+            transform: rotate(45deg);
+            position: relative;
+            top: -5px;
+        }
+
+    p {
+        padding: 25px 70px;
+    }
+
+    form {
+        // height: 200px;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+
+      
+        .contactInfoInputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(50% - 20px);
+            margin-right: 20px;
+            
+        }
+        input, textarea {
+            @extend p;
+            text-align: left;
+            padding: 20px;
+            color: black;
+            
+        }
+        textarea {
+            width: 50%;
+        }
+        
+        label {
+            display: none;
+        }
+    }
+    .submitButton {
+        display: flex;
+        margin: auto;
+        .submit {
+        @extend button;
+        margin: 40px auto;
+        width: 100px;
+        
+        }
+    }
+
+    // media queries:
+
+
+/* Landscape phone to portrait tablet */
+    @media (max-width: 840px) {
+        // height: 200vh;
+        form {
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+        textarea.message {
+            width: 100%;
+            margin:5px auto;
+        }
+        div.contactInfoInputs {
+            width: 100%;
+            input {
+                margin-top: 5px;
+            }
+        }
+    }
+
+/* Landscape phones and down */
+    @media (max-width: 480px) {
+    }     
+}

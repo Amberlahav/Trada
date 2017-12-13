@@ -1,0 +1,110 @@
+// SERVICES STYLES
+
+section.services {
+    background: url(../images/girlWithSkull.jpg), $darkColor;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    height: 80vh;
+    margin-bottom: 80px;
+
+    .girlWithSkull {
+        display:none;
+    }
+
+    .backgroundImage {
+        background: url(../images/girlWithSkull.jpg), $darkColor;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+        display: none;
+    }
+
+    .servicesInfo {
+        padding: 25px;
+        padding-left: 0;
+        margin-right: 42%;
+        p, h3, h4 {
+            text-align: right;
+        }
+    }
+    h3 {
+        color: white;
+        margin:25px 0 20px 0;
+        font-size: 1.5rem;
+    }
+    h4 {
+        color: $primaryColor;
+        font-weight: lighter;
+        padding-top: 15px;
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+    p {
+         font-size: 1.1rem;
+    }
+
+    .serviceType {
+        display: flex;
+        width: 95%;
+    }
+    i {
+        background: white;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        padding: 20px;
+        color: $primaryColor;
+        font-size: 2rem;
+        margin: 25px 0 0 20px;
+        box-shadow: 0 0 0 0.3rem rgba(255,255,255,0.4);
+    }
+     .umbrella {
+            margin-top:80px;
+        }
+
+// media queries:
+
+   @media (max-width: 940px) {
+        .girlWithSkull {
+            background: url(../images/girlWithSkull.jpg);
+            height: 100vh;
+            display: block;
+            background-size: cover;
+            background-position:center;
+            background-repeat: no-repeat;
+        }
+       height: 200vh;
+        background-image: none;
+        .servicesInfo {
+            width: 90%;
+            padding: 20px 0;
+            margin: 0 auto;
+            p, h3, h4 {
+                text-align: center;
+            }
+        }
+        .serviceType {
+            flex-direction: column;
+            align-content: center;
+            i {
+                margin: 0px auto;
+                height: 40px;
+                width: 40px;
+                padding: 10px;
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+            h3 {
+                margin-top: 10px;
+            }
+        }
+
+
+    @media (max-width: 480px) {
+        }
+}
+

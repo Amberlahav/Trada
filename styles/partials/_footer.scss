@@ -1,0 +1,145 @@
+// FOOTER SECTION
+footer.topBar {
+    background: #202020;
+    padding: 80px;
+
+    .logo {
+        display: inline-block;
+        margin: 0 auto;   
+    }
+    .footerSections {
+        display: flex;
+    }
+    h3 {
+        color: white;
+    }
+
+        p.footerText::after {
+            content:'';
+            height: 28px;
+            width:80px;
+            display:block;
+            border-bottom: 1px solid lightgrey;
+            margin: auto;
+        }
+        .diamond {
+            height: 6px;
+            width: 6px;
+            margin:0 auto;
+            background: darken($primaryColor, 5);
+            border: 1px solid white;
+            box-shadow: 1px 1px 1px grey;
+            transform: rotate(45deg);
+            position: relative;
+            top: -25px;
+        }
+
+    i {
+        color: white;
+        border: 1px solid grey;
+        padding-top: 10px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        margin: 0 2px;
+        transition: all 0.3s ease;
+        &:hover {
+            background: $primaryColor;
+            color: black;
+            border-color: $primaryColor;
+        }
+    }
+    .socialMediaIcons {
+        margin: 0 auto;
+    }
+    .contactInfo h4, .contactInfo p {
+        text-align: left;
+    }
+    .tradaSocial {
+        display: flex;
+        flex-direction: column;
+    }
+    .tradaSocial p {
+        text-align: center;
+        font-style: italic;
+        padding: 15px 70px;
+    }
+    .locationInfo h4, .locationInfo p {
+        text-align: right;
+    }
+    .contactInfo, .locationInfo {
+        padding-top: 25px;
+    }
+}
+footer.bottomBar {
+    background: black;
+     .copyright {
+        background: black;
+        padding: 20px 0;
+        margin: 0;
+        font-family: sans-serif;
+        span {
+            color: white;
+        }
+    }
+    .back {
+        position: fixed;
+        right: 30px;
+        bottom: 20px;
+        color: $primaryColor;
+        h4 {
+            border: 1px solid $primaryColor;
+            padding: 5px;
+            letter-spacing: 10px;
+        }
+        width: 50px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       i {
+           margin: 5px auto;
+           font-size: 2rem;
+       }
+       a {
+           color: $primaryColor;
+           text-decoration: none;
+           padding-left: 5px;
+           text-align: center;
+       }
+    }
+    
+}
+
+    @media (max-width: 940px) {
+        div.footerSections {
+            flex-direction: column;
+            
+            .tradaSocial p {
+                padding: 10px;
+            }
+            .logo {
+                margin-top: 40px;
+            }
+            .locationInfo, .contactInfo {
+                margin: 0 auto;
+                h4, p {
+                    text-align: center;
+                }
+                h4 {
+                     margin-top: 40px;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .back h4, .back i:last-child {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+    }

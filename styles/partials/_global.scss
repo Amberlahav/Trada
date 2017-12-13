@@ -1,0 +1,178 @@
+// GLOBAL STYLES
+
+// variables:
+$primaryColor: #daa66f;
+$darkColor: #202020;
+
+
+// mixins:
+@mixin primaryText($fontSize) {
+    font-size: $fontSize;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// general styles:
+
+html {
+     font-size: 62.5%;
+}
+.wrapper {
+    // border: 1px solid blue;
+    width: 75%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+h1 {
+    font-family: 'Droid Serif', serif;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+}
+
+h2 {
+    @include primaryText(8rem);
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+h2 span {
+    color: $primaryColor;
+}
+
+h3 {
+    @include primaryText(2rem);
+    font-weight:600;
+    text-align:center;
+    margin: 0;
+}
+
+
+h4 {
+    @extend h3;
+    font-size: 1.3rem;
+}
+
+p {
+    font-family: 'Droid Serif', serif;
+    color: grey;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8;
+
+}
+
+img {
+    width: 100%;
+}
+
+.logo {
+        @include primaryText(2.5rem);
+        padding: 5px 10px;
+        color: white;
+        border: 2px solid $primaryColor;
+        display: inline;
+        }
+
+
+
+button {
+    @include primaryText(1rem);
+    border: 1px solid black;
+    padding: 5px 10px;
+    background: transparent;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+        background: $primaryColor;
+        color: white;
+        border-color: transparent;
+}
+
+img.iconImage {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        background: $primaryColor;
+        box-shadow: 0 0 0 0.3rem rgba(255,255,255,0.4);
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        margin-bottom: 50px;
+        position: absolute;
+        right: 0;
+        left:0;
+        top: -25px;
+            
+    }
+
+    // visually hidden:
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+// media queries:
+
+@media (max-width: 940px) {
+       h3 {
+           font-size: 1.8rem;
+       }
+       p {
+           font-size: 1.1rem;
+       }
+       h4 {
+           font-size:1.2rem;
+       }
+    }
+
+
+    @media (max-width: 768px) {
+        h3 {
+           font-size: 1.6rem;
+        }
+       p {
+           font-size: 1.1rem;
+        }
+       h4 {
+           font-size:1.2rem;
+        }
+        .wrapper {
+            width: 80%;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        h3 {
+           font-size: 1.4rem;
+       }
+       p {
+           font-size: 1rem;
+       }
+       h4 {
+           font-size:1.1rem;
+       }
+    }

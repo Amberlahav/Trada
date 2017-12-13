@@ -1,0 +1,233 @@
+header {
+    background: url(../images/backgroundHeader.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 100vh;
+
+    input#toggle {
+	display: none; 
+        }
+    label[for="toggle"] {
+        position: absolute;
+        z-index: 4;
+        top: 25px;
+        left: 170px;
+        color: $primaryColor;
+        font-size: 3rem;
+        }
+    .mobileNav {
+        display: flex;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: space-around;
+        background: rgba(218,166,111,0.9);
+        width: 30%;
+        position: absolute;
+        left:-30%;
+        top: 85px;
+        padding: 5px;
+        margin: 0;
+        transition: all 0.3s ease;
+        
+        li {
+            text-align: center;
+            padding: 5px;
+            margin: 0px;
+            font-size: 1.6rem;
+            &:last-child {
+                border: none;
+            }
+            &:hover {
+                background: darken($primaryColor, 10);
+            }
+            a:hover {
+                color: white;
+                border: transparent;
+            }
+        }
+
+    }
+    nav {
+        display: flex;
+        padding-top: 20px;
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+            margin: 0 20px;
+            padding-top: 20px;
+            padding-left: 0;
+            a {
+                text-decoration: none;
+                @include primaryText(1.4rem);
+                color: white;
+                border: 1px solid transparent;
+                padding: 5px 10px;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: $primaryColor;
+                    border: 1px solid $primaryColor;
+                    padding: 5px 10px;
+                }
+            }   
+        }
+        .logo {
+            margin: 40px;
+            margin-top: 10px;
+        }
+        .socialIcons {
+            @include primaryText(1.6rem);
+            color: white;
+            margin-right: 30px;
+            padding-top: 20px;
+            text-align: right;
+            letter-spacing: 3px;
+            i {
+                color: white;
+                text-align: center;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+
+        } 
+
+    }
+    .titles {
+        // padding-top: 160px;
+        position:relative; 
+        top:35%; 
+        transform:translateY(-50%);
+    }
+    .headerBottomDetails {
+        display: flex; 
+        width: 10%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .dashes {
+            border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+            height: 290px;
+            width: 35px;
+            &:nth-child(2) {
+                border-color: $primaryColor;
+            }
+        }
+    }
+    * {
+        // border: 1px solid blue;
+    }
+// media queries:
+
+    @media (max-width: 1120px) {
+        .socialIcons {
+            padding: 5px;
+        }
+
+        .dashes {
+            display: none;
+        }
+
+        h2 {
+            font-size: 8rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+        }
+       .titles {
+            position:relative; 
+            top:35%; 
+            transform:translateY(-50%);
+         }
+        
+        }
+        label#toggle {
+            display: none;  
+        }
+
+    @media (max-width: 940px) {
+        a {
+            @include primaryText(1.4rem);
+            letter-spacing: 2px;
+        } 
+        h2 {
+            font-size: 7rem;
+        }
+        .socialIcons {
+            width: 100%;
+            margin-right: 5px;
+        }
+
+        .nav a {
+            font-size:1.2rem; 
+        }
+        .logo {
+            height: 45px;
+        }
+        li {
+            padding-bottom: 5px;
+        }
+        a:hover {
+            border:none;    
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        .titles {
+            position:relative; 
+            top:35%; 
+            transform:translateY(-50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        label#toggle {
+        display: block; 
+        
+        }
+
+        input[type=checkbox]:checked ~ .mobileNav {
+            left:0%;  
+        }
+        .nav {
+            display: none;
+        }
+
+        h2 {
+            font-size: 5rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        .titles {
+            position:relative; 
+            top:35%; 
+            transform:translateY(-50%);
+        }
+    }
+
+        
+    @media (max-width: 480px) {
+        height: 100vh;
+
+        h2 {
+            font-size: 4rem;
+        }
+        h1 {
+            font-size: 1.6rem;
+        }
+        .titles {
+            position:relative; 
+            top:40%; 
+            transform:translateY(-50%);
+        }
+    }
+}
+
+
+
+

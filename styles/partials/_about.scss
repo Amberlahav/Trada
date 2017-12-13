@@ -1,0 +1,220 @@
+section.about {
+    background: #f6f6f6;
+    position: relative;
+    padding:100px 0;
+    height: 200vh;
+        .aboutSection {
+            position: relative;
+        }
+        .welcomeText {
+            // background: url(../images/girlWithHat.jpg);
+            // background-size: 55%;
+            // background-repeat: no-repeat;
+            // background-position: center left;
+            // margin-top:70px;
+        //    transform:translateY(-50%);
+            position: absolute;
+            right: 0;
+            bottom:50%;
+            width: 100%;
+           
+        }
+        h3 {
+            padding-bottom: 30px;
+        }
+
+        h3.welcome::after {
+            content:'';
+            height: 10px;
+            width:45px;
+            display:block;
+            border-bottom: 1px solid grey;
+        }
+          p.introduction::before {
+          content:'';
+            height: 10px;
+            width:30px;
+            display:block;
+            border-top: 1px solid grey;
+            position: relative;
+            bottom: 38px;
+        }
+
+        // img.girlWithHat {
+        //     display: none;
+        // }
+        
+        div.girlWithHatPic {
+            background: url(../images/girlWithHat.jpg);
+            background-size: 55%;
+            background-repeat: no-repeat;
+            background-position: center left;
+            height: 100vh;
+        }
+
+        h3.mainTitle::after {
+            content:'';
+            height: 30px;
+            width:80px;
+            display:block;
+            border-bottom: 1px solid lightgrey;
+            margin: auto;
+        }
+        .diamond {
+            height: 6px;
+            width: 6px;
+            margin:0 auto;
+            background: $primaryColor;
+            border: 1px solid white;
+            box-shadow: 1px 1px 1px grey;
+            transform: rotate(45deg);
+            position: relative;
+            top: -35px;
+        }
+
+        
+        .buttons {
+            width: 22%;
+            margin: 40px auto;
+            display: flex;
+            align-content: space-between;
+            button {
+                width: calc(50% - 5px);
+            }
+        }
+        .servicesInfo {
+            background: white;
+            width: 55%;
+            position: absolute;
+            right:0;
+            top: 50%;
+            transform:translateY(-50%);
+            padding: 50px;
+            h3, h4, p {
+                text-align: left;
+            }
+            h4 {
+                font-weight: 500;
+                padding-top: 30px;
+                padding-bottom: 0;
+            }
+            h3 {
+                font-weight: 500;
+                span {
+                    @extend h3;
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+
+            div.skill {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 25px;
+                border-bottom: 1px solid #e5e5e5;
+
+                .greyLine {
+                    height: 5px;
+                    width: 100%;
+                    background: #e5e5e5;
+                    align-self: row;
+                }
+
+            }
+            p.skill {
+                font-style: italic;
+                margin: 0;
+               
+            }
+
+            div.goldArrow {  
+                height: 2px;
+                background: $primaryColor;
+                
+            }
+           
+            .arrowRightTip {
+                color: $primaryColor;
+                position:relative;
+                left:100%;
+                bottom:9px;
+                font-size:2rem;
+                align-self: flex-end;
+            }
+            div.goldArrow1 {
+                width: 50%;
+            }
+            div.goldArrow2 {
+                width: 75%;
+            }
+            div.goldArrow3 {
+                width: 40%;
+            }
+            div.goldArrow4 {
+                width: 95%;
+            }
+            span {
+                @extend p;    
+                font-style: none;
+        
+                }
+               
+        }
+    
+        
+    // media queries:
+    
+    @media (max-width: 1040px) {
+        .servicesInfo {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 940px) {
+        height: 230vh;
+        .buttons {
+            flex-direction: column;
+            width: 150px;
+            button {
+                width: 120px;
+                margin-top: 5px;
+            }
+        }
+        .aboutSection {
+            display: flex;
+            flex-direction: column;
+        }
+        .servicesInfo {
+            width: 100%;
+            margin: 250px auto;
+
+        }
+        div.girlWithHatPic {
+            background-size: 100%;
+            height: 70vh;
+        }
+
+    }
+
+
+    @media (max-width: 768px) {
+        background-attachment: scroll;
+        button {
+                width: 100px;
+                margin: 3px auto;
+            }
+        
+    }
+
+
+    @media (max-width: 480px) {
+        // height: 200vh;
+        button {
+                width: 70px;
+                margin: 2px auto;
+            }
+
+    }
+    
+}

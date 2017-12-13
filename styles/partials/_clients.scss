@@ -1,0 +1,147 @@
+// CLIENTS SECTION
+
+section.clients {
+    background: #3b3b3b;
+    position: relative;
+    .logoGallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .left {
+        position: relative;
+        left: 10px;
+    }
+    .right {
+        position: relative;
+        right: 10px;
+    }
+    .logoGallery ul {
+        display: flex;
+        padding: 0 5px;
+        justify-content: space-around;
+        list-style-type: none;
+        margin:50px 0 0 0;
+        background: lighten(#3b3b3b, 5);
+        li {
+            width: 20%;
+            padding: 20px 5px;
+            border-right: 1px solid grey;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li img {
+            transition: all 0.5s ease;
+        }
+    
+        li:hover img {
+            transform:translateY(-10px);
+        }
+        img {
+            width: 60%;
+            margin-left: 20%;
+        }
+        
+    }
+    .logoGallery i {
+        background: white;
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        height: 25px;
+        width: 25px;
+        margin-top: 90px;
+        &:hover {
+            background: $primaryColor;
+        }
+    }
+  
+    h3 {
+        padding: 50px 0;
+    }
+
+    h3.mainTitle::after {
+            content:'';
+            height: 30px;
+            width:80px;
+            display:block;
+            border-bottom: 1px solid lightgrey;
+            margin: auto;
+        }
+        .diamond {
+            height: 6px;
+            width: 6px;
+            margin:0 auto;
+            background: darken($primaryColor, 5);
+            border: 1px solid white;
+            box-shadow: 1px 1px 1px grey;
+            transform: rotate(45deg);
+            position: relative;
+            top: -53px;
+        }
+
+    h4 {
+        padding: 20px 0 5px 0;
+        p {
+            text-transform: lowercase;
+            display: inline;
+            font-style: italic;
+            padding: 0 5px;
+            color: white;
+        }
+    }
+    h3, h4 {
+        color: white;
+    }
+    p {
+        color:darkgrey;
+        padding: 0 50px;
+    }
+    .stars {
+        width: 8%;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px auto 30px;
+
+        i {
+        color: $primaryColor;
+        font-weight: bold;
+        text-align:center;
+
+        }
+    }
+// media queries:
+
+   @media (max-width: 940px) {
+       .logoGallery i {
+           font-weight: 1.6;
+            margin-top: 80px;
+       }
+    }
+
+    @media (max-width: 768px) {
+        .logoGallery i {
+           font-weight: 1.4;
+            margin-top: 80px;
+       }
+       
+       .logo1, .logo2 {
+           display: none;
+       }
+       .logoGallery ul {
+           li {
+            width: 33%;
+            }
+       }
+    }
+
+    @media (max-width: 480px) {
+        .logoGallery i {
+           font-weight: 1.2;
+            margin-top: 80px;
+       }
+    }
+}

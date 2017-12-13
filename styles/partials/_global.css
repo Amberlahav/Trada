@@ -1,0 +1,134 @@
+html {
+  font-size: 62.5%; }
+
+.wrapper {
+  width: 75%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+h1 {
+  font-family: 'Droid Serif', serif;
+  font-size: 2.4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px; }
+
+h2 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: white;
+  margin: 0; }
+
+h2 span {
+  color: #daa66f; }
+
+h3, h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 0; }
+
+h4 {
+  font-size: 1.3rem; }
+
+p {
+  font-family: 'Droid Serif', serif;
+  color: grey;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.8; }
+
+img {
+  width: 100%; }
+
+.logo {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px;
+  color: white;
+  border: 2px solid #daa66f;
+  display: inline; }
+
+button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid black;
+  padding: 5px 10px;
+  background: transparent;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+button:hover {
+  background: #daa66f;
+  color: white;
+  border-color: transparent; }
+
+img.iconImage {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  background: #daa66f;
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.4);
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin-bottom: 50px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -25px; }
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+@media (max-width: 940px) {
+  h3, h4 {
+    font-size: 1.8rem; }
+  p {
+    font-size: 1.1rem; }
+  h4 {
+    font-size: 1.2rem; } }
+
+@media (max-width: 768px) {
+  h3, h4 {
+    font-size: 1.6rem; }
+  p {
+    font-size: 1.1rem; }
+  h4 {
+    font-size: 1.2rem; }
+  .wrapper {
+    width: 80%; } }
+
+@media (max-width: 480px) {
+  h3, h4 {
+    font-size: 1.4rem; }
+  p {
+    font-size: 1rem; }
+  h4 {
+    font-size: 1.1rem; } }
